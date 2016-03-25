@@ -9,6 +9,8 @@
 import UIKit
 
 class ItemCell: UITableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
 
     func configCellWithItem(item: ToDoItem) {
         
