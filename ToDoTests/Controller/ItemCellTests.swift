@@ -12,9 +12,18 @@ import XCTest
 
 class ItemCellTests: XCTestCase {
     
+    var tableView: UITableView!
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("ItemListViewController") as! ItemListViewController
+        
+        _ = controller.view
+        
+        tableView = controller.tableView
+        tableView.dataSource = FakeDataSource()
     }
     
     override func tearDown() {
@@ -24,18 +33,43 @@ class ItemCellTests: XCTestCase {
     
     func testSUT_HasNameLabel() {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("ItemListViewController") as! ItemListViewController
-        
-        _ = controller.view
-        
-        let tableView = controller.tableView
-        tableView.dataSource = FakeDataSource()
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell") as! ItemCell
-        //, forIndexPath: NSIndexPath(forRow: 0, inSection: 0)) as! ItemCell
         
         XCTAssertNotNil(cell.titleLabel)
+    }
+    
+    func testSUT_HasLocationLabel() {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell") as! ItemCell
+        
+        XCTAssertNotNil(cell.locationLabel)
+    }
+    
+    func testSUT_HasDateLabel() {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell") as! ItemCell
+        
+        XCTAssertNotNil(cell.dateLabel)
+    }
+    
+    func testConfigWithItem_SetsTitle() {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell") as! ItemCell
+        cell.configCellWithItem(ToDoItem(title: "First"))
+       
+        XCTAssertEqual(cell.titleLabel.text, "First")
+    }
+    
+    func testConfigWithItem_SetsLabelTexts() {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier( "ItemCell") as! ItemCell
+
+       
+        cell.configCellWithItem(ToDoItem(title: "First", itemDescription: nil, timestamp: 1456150025, location: Location(name: "Home")))
+        
+        XCTAssertEqual(cell.titleLabel.text, "First")
+        XCTAssertEqual(cell.locationLabel.text, "Home")
+        XCTAssertEqual(cell.dateLabel.text, "02/22/2016")
     }
 }
 
