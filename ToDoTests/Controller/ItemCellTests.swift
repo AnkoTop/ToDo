@@ -71,6 +71,38 @@ class ItemCellTests: XCTestCase {
         XCTAssertEqual(cell.locationLabel.text, "Home")
         XCTAssertEqual(cell.dateLabel.text, "02/22/2016")
     }
+    
+    func testTitle_ForCheckedTasks_IsStrokeThrough() {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell") as! ItemCell
+        
+        let toDoItem = ToDoItem(title: "First", itemDescription: nil, timestamp: 1456150025, location: Location(name: "Home"))
+        
+        cell.configCellWithItem(toDoItem, checked: true)
+        
+        let attributedString = NSAttributedString(string: "First", attributes: [NSStrikethroughStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue])
+        
+        XCTAssertEqual(cell.titleLabel.attributedText,attributedString)
+        XCTAssertNil(cell.locationLabel.text)
+        XCTAssertNil(cell.dateLabel.text)
+    }
+    
+    /*
+     func testSettingItemInfo_SetsTextsToLabels() {
+     
+     let coordinate = CLLocationCoordinate2D(latitude: 51.2277, longitude: 6.7735)
+     
+     let itemManager = ItemManager()
+     itemManager.addItem(ToDoItem(title: "The title",
+     itemDescription: "The description",
+     timestamp: 1456150025,
+     location: Location(name: "Home", coordinate: coordinate)))
+     
+     sut.itemInfo = (itemManager, 0)
+     }
+ 
+ */
+
 }
 
 //MARK - FAKING
