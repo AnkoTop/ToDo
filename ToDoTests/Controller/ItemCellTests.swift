@@ -87,22 +87,7 @@ class ItemCellTests: XCTestCase {
         XCTAssertNil(cell.dateLabel.text)
     }
     
-    /*
-     func testSettingItemInfo_SetsTextsToLabels() {
-     
-     let coordinate = CLLocationCoordinate2D(latitude: 51.2277, longitude: 6.7735)
-     
-     let itemManager = ItemManager()
-     itemManager.addItem(ToDoItem(title: "The title",
-     itemDescription: "The description",
-     timestamp: 1456150025,
-     location: Location(name: "Home", coordinate: coordinate)))
-     
-     sut.itemInfo = (itemManager, 0)
-     }
  
- */
-
 }
 
 //MARK - FAKING

@@ -106,6 +106,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3v7-P6-vEC">
+                                <rect key="frame" x="180" y="28" width="240" height="128"/>
+                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqE-QS-rl5">
                                 <rect key="frame" x="279" y="347" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -117,14 +120,67 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="fVO-Cv-qGV" id="goQ-c3-hMj"/>
-                        <outlet property="itemDescriptionLabel" destination="0TQ-kf-WVo" id="7ni-UR-63P"/>
+                        <outlet property="descriptionLabel" destination="0TQ-kf-WVo" id="4ES-e4-zoJ"/>
                         <outlet property="locationLabel" destination="vqE-QS-rl5" id="2vH-ds-mO9"/>
+                        <outlet property="mapView" destination="3v7-P6-vEC" id="grN-vs-akg"/>
                         <outlet property="titleLabel" destination="eV9-nj-BBo" id="7zO-cD-PIh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfi-t6-K2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="931" y="675"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="9I0-bg-eyJ">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" id="r8H-Cq-XZb" customClass="InputViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cel-JS-evM"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jxs-9W-SDX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gOs-sZ-UPK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvj-Th-Jvr">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T0v-aS-DeP">
+                                <rect key="frame" x="20" y="58" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sB9-8O-MVv">
+                                <rect key="frame" x="20" y="96" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1tJ-Zv-QFJ">
+                                <rect key="frame" x="20" y="134" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-Dp-Xy2">
+                                <rect key="frame" x="20" y="172" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="adressTextField" destination="1tJ-Zv-QFJ" id="wXo-yW-2pt"/>
+                        <outlet property="dateTextField" destination="T0v-aS-DeP" id="5VT-zb-l21"/>
+                        <outlet property="descriptionTextField" destination="GjY-Dp-Xy2" id="fbg-Ud-SZR"/>
+                        <outlet property="locationTextField" destination="sB9-8O-MVv" id="RiF-S2-t8E"/>
+                        <outlet property="titleTextField" destination="qvj-Th-Jvr" id="4FJ-mS-Lie"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jk3-7I-tpk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1559" y="675"/>
         </scene>
     </scenes>
 </document>

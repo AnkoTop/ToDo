@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct ToDoItem : Equatable {
     
     let title : String
