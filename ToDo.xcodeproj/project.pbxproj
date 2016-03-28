@@ -26,6 +26,7 @@
 		A4D678761CA5EDEF00CBEE05 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D678751CA5EDEF00CBEE05 /* ItemCellTests.swift */; };
 		A4D678781CA6866F00CBEE05 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D678771CA6866F00CBEE05 /* DetailViewControllerTests.swift */; };
 		A4D6787A1CA6871200CBEE05 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D678791CA6871200CBEE05 /* DetailViewController.swift */; };
+		A4D6787C1CA926D900CBEE05 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D6787B1CA926D900CBEE05 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		A4D678751CA5EDEF00CBEE05 /* ItemCellTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCellTests.swift; path = Controller/ItemCellTests.swift; sourceTree = "<group>"; };
 		A4D678771CA6866F00CBEE05 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewControllerTests.swift; path = Controller/DetailViewControllerTests.swift; sourceTree = "<group>"; };
 		A4D678791CA6871200CBEE05 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Controller/DetailViewController.swift; sourceTree = "<group>"; };
+		A4D6787B1CA926D900CBEE05 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4D6787C1CA926D900CBEE05 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 		A4D6782D1CA1EE5D00CBEE05 = {
 			isa = PBXGroup;
 			children = (
+				A4D6787B1CA926D900CBEE05 /* MapKit.framework */,
 				A4D678691CA486EB00CBEE05 /* README.md */,
 				A4D678381CA1EE5D00CBEE05 /* ToDo */,
 				A4D6784D1CA1EE5D00CBEE05 /* ToDoTests */,
@@ -201,6 +205,11 @@
 				TargetAttributes = {
 					A4D678351CA1EE5D00CBEE05 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A4D678491CA1EE5D00CBEE05 = {
 						CreatedOnToolsVersion = 7.3;
