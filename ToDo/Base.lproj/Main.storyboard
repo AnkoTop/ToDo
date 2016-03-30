@@ -199,6 +199,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcb-io-iXd">
                                 <rect key="frame" x="266" y="285" width="314" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save" destination="r8H-Cq-XZb" eventType="touchUpInside" id="42b-K7-16F"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1tJ-Zv-QFJ">
                                 <rect key="frame" x="116" y="134" width="464" height="30"/>

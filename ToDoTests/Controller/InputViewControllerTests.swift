@@ -70,6 +70,38 @@ class InputViewControllerTests: XCTestCase {
     
     func testSave_WithNoDataShouldFail() {
         
+        sut.itemManager = ItemManager()
+        sut.save()
+        
+        XCTAssertEqual(sut.itemManager?.toDoCount, 0 , "Item should not have been saved")
+        
+    }
+    
+    func testSave_WithOnlyTitleFilledShouldWork() {
+        sut.titleTextField.text = "Test Title"
+        sut.itemManager = ItemManager()
+        sut.save()
+        
+        XCTAssertEqual(sut.itemManager?.itemAtIndex(0).title, sut.titleTextField.text , "Item should have been saved")
+    }
+    
+    func testSave_WithTitleAndDescriptionShouldWork(){
+        sut.titleTextField.text = "Test Title"
+        sut.dateTextField.text = "02/22/2016"
+        sut.descriptionTextField.text = "Test Description"
+        sut.itemManager = ItemManager()
+        sut.save()
+        
+        
+        let item = sut.itemManager?.itemAtIndex(0)
+        
+        let testItem = ToDoItem(title: "Test Title",
+                                itemDescription: "Test Description",
+                                timestamp: 1456095600,
+                                location: nil)
+        
+        XCTAssertEqual(item, testItem)
+
     }
     
     func testSave_UsesGeocoderToGetCoordinateFromAddress() {
@@ -101,6 +133,15 @@ class InputViewControllerTests: XCTestCase {
         
         XCTAssertEqual(item, testItem)
     }
+    
+    func test_SaveButtonHasSaveAction() {
+        let saveButton: UIButton = sut.saveButton
+        
+        guard let actions = saveButton.actionsForTarget(sut, forControlEvent: .TouchUpInside) else { XCTFail(); return}
+        
+        XCTAssertTrue(actions.contains("save"))
+    }
+    
 }
 
 
