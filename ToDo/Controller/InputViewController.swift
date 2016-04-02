@@ -76,8 +76,12 @@ class InputViewController: UIViewController {
                                         timestamp: date?.timeIntervalSince1970,
                                         location: Location(name: locationName,
                                             coordinate: placeMark?.location?.coordinate))
-                    
-                    self.itemManager?.addItem(item)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        () -> Void in
+                        self.itemManager?.addItem(item)
+                        self.dismissViewControllerAnimated(true,
+                            completion: nil)
+                    })
                 }
             } else {
                 let item = ToDoItem(title: titleString,
@@ -86,6 +90,7 @@ class InputViewController: UIViewController {
                                     location: Location(name: locationName))
                 
                 self.itemManager?.addItem(item)
+                dismissViewControllerAnimated(true, completion: nil)
             }
         } else {
         
@@ -95,6 +100,7 @@ class InputViewController: UIViewController {
                                 location: nil)
         
             self.itemManager?.addItem(item)
+            dismissViewControllerAnimated(true, completion: nil)
         }
     }
     

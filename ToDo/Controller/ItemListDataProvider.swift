@@ -8,12 +8,16 @@
 
 import UIKit
 
+@objc protocol ItemManagerSettable {
+    var itemManager: ItemManager? { get set }
+}
+
 enum Section: Int {
     case ToDo
     case Done
 }
 
-class ItemListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
+class ItemListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate, ItemManagerSettable  {
     
     var itemManager: ItemManager?
     
@@ -78,6 +82,19 @@ class ItemListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate
         }
         
         return buttonTitle
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        guard let itemSection = Section(rawValue: indexPath.section) else { fatalError() }
+        
+        switch itemSection {
+        case .ToDo:
+            NSNotificationCenter.defaultCenter().postNotificationName( "ItemSelectedNotification", object: self,userInfo: ["index": indexPath.row])
+            
+        default:
+            break
+        }
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle,forRowAtIndexPath indexPath: NSIndexPath) {

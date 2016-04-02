@@ -10,6 +10,8 @@
 		A418BB551CAC6910008D64BE /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BB541CAC6910008D64BE /* APIClientTests.swift */; };
 		A418BB571CAC6963008D64BE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BB561CAC6963008D64BE /* APIClient.swift */; };
 		A418BB591CAC710B008D64BE /* KeychainAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BB581CAC710B008D64BE /* KeychainAccessible.swift */; };
+		A418BB5B1CAD0630008D64BE /* StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BB5A1CAD0630008D64BE /* StoryboardTests.swift */; };
+		A418BB631CADB8ED008D64BE /* ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418BB621CADB8ED008D64BE /* ToDoUITests.swift */; };
 		A4D6783A1CA1EE5D00CBEE05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D678391CA1EE5D00CBEE05 /* AppDelegate.swift */; };
 		A4D6783F1CA1EE5D00CBEE05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D6783D1CA1EE5D00CBEE05 /* Main.storyboard */; };
 		A4D678411CA1EE5D00CBEE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D678401CA1EE5D00CBEE05 /* Assets.xcassets */; };
@@ -35,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A418BB651CADB8ED008D64BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4D6782E1CA1EE5D00CBEE05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4D678351CA1EE5D00CBEE05;
+			remoteInfo = ToDo;
+		};
 		A4D6784B1CA1EE5D00CBEE05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A4D6782E1CA1EE5D00CBEE05 /* Project object */;
@@ -48,6 +57,10 @@
 		A418BB541CAC6910008D64BE /* APIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 		A418BB561CAC6963008D64BE /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A418BB581CAC710B008D64BE /* KeychainAccessible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessible.swift; sourceTree = "<group>"; };
+		A418BB5A1CAD0630008D64BE /* StoryboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardTests.swift; sourceTree = "<group>"; };
+		A418BB601CADB8ED008D64BE /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A418BB621CADB8ED008D64BE /* ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoUITests.swift; sourceTree = "<group>"; };
+		A418BB641CADB8ED008D64BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D678361CA1EE5D00CBEE05 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D678391CA1EE5D00CBEE05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4D6783E1CA1EE5D00CBEE05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A418BB5D1CADB8ED008D64BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D678331CA1EE5D00CBEE05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,6 +139,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		A418BB611CADB8ED008D64BE /* ToDoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A418BB621CADB8ED008D64BE /* ToDoUITests.swift */,
+				A418BB641CADB8ED008D64BE /* Info.plist */,
+			);
+			path = ToDoUITests;
+			sourceTree = "<group>";
+		};
 		A4D6782D1CA1EE5D00CBEE05 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +155,7 @@
 				A4D678691CA486EB00CBEE05 /* README.md */,
 				A4D678381CA1EE5D00CBEE05 /* ToDo */,
 				A4D6784D1CA1EE5D00CBEE05 /* ToDoTests */,
+				A418BB611CADB8ED008D64BE /* ToDoUITests */,
 				A4D678371CA1EE5D00CBEE05 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -135,6 +165,7 @@
 			children = (
 				A4D678361CA1EE5D00CBEE05 /* ToDo.app */,
 				A4D6784A1CA1EE5D00CBEE05 /* ToDoTests.xctest */,
+				A418BB601CADB8ED008D64BE /* ToDoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +193,7 @@
 				A4D678661CA4841800CBEE05 /* Model */,
 				A418BB531CAC61BB008D64BE /* Controller */,
 				A418BB541CAC6910008D64BE /* APIClientTests.swift */,
+				A418BB5A1CAD0630008D64BE /* StoryboardTests.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -189,6 +221,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A418BB5F1CADB8ED008D64BE /* ToDoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A418BB671CADB8ED008D64BE /* Build configuration list for PBXNativeTarget "ToDoUITests" */;
+			buildPhases = (
+				A418BB5C1CADB8ED008D64BE /* Sources */,
+				A418BB5D1CADB8ED008D64BE /* Frameworks */,
+				A418BB5E1CADB8ED008D64BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A418BB661CADB8ED008D64BE /* PBXTargetDependency */,
+			);
+			name = ToDoUITests;
+			productName = ToDoUITests;
+			productReference = A418BB601CADB8ED008D64BE /* ToDoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A4D678351CA1EE5D00CBEE05 /* ToDo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4D678531CA1EE5D00CBEE05 /* Build configuration list for PBXNativeTarget "ToDo" */;
@@ -234,6 +284,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Anko Top";
 				TargetAttributes = {
+					A418BB5F1CADB8ED008D64BE = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A4D678351CA1EE5D00CBEE05;
+					};
 					A4D678351CA1EE5D00CBEE05 = {
 						CreatedOnToolsVersion = 7.3;
 						SystemCapabilities = {
@@ -263,11 +317,19 @@
 			targets = (
 				A4D678351CA1EE5D00CBEE05 /* ToDo */,
 				A4D678491CA1EE5D00CBEE05 /* ToDoTests */,
+				A418BB5F1CADB8ED008D64BE /* ToDoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A418BB5E1CADB8ED008D64BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D678341CA1EE5D00CBEE05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,6 +350,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A418BB5C1CADB8ED008D64BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A418BB631CADB8ED008D64BE /* ToDoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A4D678321CA1EE5D00CBEE05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +387,7 @@
 				A4D678601CA1FB6100CBEE05 /* LocationTests.swift in Sources */,
 				A4D678781CA6866F00CBEE05 /* DetailViewControllerTests.swift in Sources */,
 				A4D6785A1CA1F25400CBEE05 /* ToDoItemTests.swift in Sources */,
+				A418BB5B1CAD0630008D64BE /* StoryboardTests.swift in Sources */,
 				A418BB551CAC6910008D64BE /* APIClientTests.swift in Sources */,
 				A4D6786C1CA4879800CBEE05 /* ItemListViewControllerTests.swift in Sources */,
 				A4D6787E1CA92DAD00CBEE05 /* InputViewControllerTests.swift in Sources */,
@@ -326,6 +397,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A418BB661CADB8ED008D64BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4D678351CA1EE5D00CBEE05 /* ToDo */;
+			targetProxy = A418BB651CADB8ED008D64BE /* PBXContainerItemProxy */;
+		};
 		A4D6784C1CA1EE5D00CBEE05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A4D678351CA1EE5D00CBEE05 /* ToDo */;
@@ -353,6 +429,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A418BB681CADB8ED008D64BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ToDoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.reactivity.ToDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ToDo;
+			};
+			name = Debug;
+		};
+		A418BB691CADB8ED008D64BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ToDoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.reactivity.ToDoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ToDo;
+			};
+			name = Release;
+		};
 		A4D678511CA1EE5D00CBEE05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -485,6 +583,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A418BB671CADB8ED008D64BE /* Build configuration list for PBXNativeTarget "ToDoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A418BB681CADB8ED008D64BE /* Debug */,
+				A418BB691CADB8ED008D64BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A4D678311CA1EE5D00CBEE05 /* Build configuration list for PBXProject "ToDo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
