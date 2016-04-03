@@ -43,6 +43,13 @@ class InputViewController: UIViewController {
         return dateFormatter
     }()
     
+    
+    @IBAction func cancel() {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
     @IBAction func save() {
         
         guard let titleString = titleTextField.text where titleString.characters.count > 0 else { return }

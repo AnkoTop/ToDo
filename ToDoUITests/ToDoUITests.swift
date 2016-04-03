@@ -31,6 +31,8 @@ class ToDoUITests: XCTestCase {
     func testExample() {
         
         
+        // UI recording doesn't seem to work: the genereated code can't be played back without errors.
+        
         let app = XCUIApplication()
         app.navigationBars["ToDo.ItemListView"].buttons["Add"].tap()
         
